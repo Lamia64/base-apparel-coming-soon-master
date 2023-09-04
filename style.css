@@ -1,0 +1,162 @@
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&family=Roboto:ital,wght@1,300&display=swap');
+
+ :root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --fs: 16px
+ }
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+ }
+
+ main {
+
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+    font-family: Josefin Sans;
+    display: flex;
+ }
+
+ /*****************************left sec********************************/
+
+ .left-sec {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 70px 0 190px;
+    row-gap: 124px;
+ }
+
+ .logo-container {
+    display: flex;
+    
+ }
+
+ .hero-mobile-container {
+    display: none;
+   width: 100%;
+ }
+ .hero-mobile-container img 
+ {
+    width: 100%;
+    margin-top: 100px;
+ }
+
+ .content {
+    display: grid;
+    row-gap: 34px;
+    max-width: 500px;
+ }
+
+ .content h3 {
+    font-size: 55px;
+    color: var(--Dark-Grayish-Red);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 60px;
+ }
+
+ .content span {
+    color: var(--Desaturated-Red);
+    font-weight: 100;
+ }
+
+ .content p {
+    max-width: 100%;
+    line-height: 27px;
+    color: var(--Desaturated-Red);
+ }
+
+ .content form {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    align-items: center;
+    row-gap: 14px;
+
+ }
+
+ .content div {
+    display: flex;
+    align-items: center;
+
+ }
+
+ .content .email-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--Desaturated-Red);
+    border-radius: 30px;
+
+ }
+
+ .email-input::placeholder {
+    color: var(--Desaturated-Red);
+ }
+
+ .submit-button {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 40px;
+    margin-left: -50px;
+ }
+
+ .error-icon {
+    margin-left: -70px;
+    visibility: hidden;
+ }
+
+ /*****************************media******************************/
+ @media screen and (max-width: 700px) {
+
+    .left-sec {
+       text-align: center;
+       row-gap: 22px;
+       padding: 0;
+       align-items: center;
+
+    }
+
+    .hero-mobile-container {
+       display: block;
+    }
+
+    .logo-container {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       background-color: hsl(0, 0%, 100%);
+       padding: 30px 40px;
+
+
+    }
+
+    .right-sec {
+       display: none;
+    }
+    .content
+    {
+      padding :30px ;
+    }
+    .content h3 { font-size: 45px; font-weight: 600; }
+    .content p { font-size: 14px;}
+    .submit-button {margin-left: -40px;}
+
+ }
